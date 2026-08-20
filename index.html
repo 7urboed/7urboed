@@ -604,7 +604,11 @@
   }
   .work-card.placeholder{border-style:solid;opacity:.82;}
   .work-card.placeholder::before{background:repeating-linear-gradient(135deg,transparent 0 10px,rgba(255,255,255,.024) 10px 11px);opacity:1;}
-  .work-card.placeholder .plus{font-family:'Cinzel',serif;color:var(--chrome-hi);font-size:2rem;}
+  .work-card.has-video{padding:0;}
+  .work-card.has-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+  .work-card::before{z-index:1;}
+  .work-card.has-video .card-text{position:relative;z-index:2;padding:1.1rem;display:flex;flex-direction:column;gap:.3rem;}
+
   .work-card .card-title{font-family:'Cinzel',serif;letter-spacing:.08em;}
   .work-card .card-meta{color:#c3c6ce;}
   .work-card:hover{border-color:rgba(245,246,248,.7);transform:translateY(-6px) scale(1.01);}
@@ -664,7 +668,7 @@
     </button>
   </div>
 </header>
-<audio id="siteMusic" loop preload="metadata"><source src="./wiv - i love u. (slowed  reverb).mp3" type="audio/mpeg"></audio>
+<audio id="siteMusic" loop preload="auto" autoplay><source src="./wiv%20-%20i%20love%20u.%20(slowed%20%20reverb).mp3" type="audio/mpeg"></audio>
 
 <!-- HERO -->
 <section class="hero" id="hero">
@@ -757,10 +761,22 @@
   <div class="card-zoom" style="height:400vh;">
     <div class="card-zoom-sticky">
       <div class="card-zoom-stage">
-        <div class="work-card placeholder zoom-card" data-filename="R8 ABT"><span class="plus">+</span><span class="card-title">Audi R8 ABT</span><span class="card-meta">2ND MOST VIRAL · AWAITING FILE</span></div>
-        <div class="work-card placeholder zoom-card" data-filename="SF90XX_2_prob4"><span class="plus">+</span><span class="card-title">Ferrari SF90</span><span class="card-meta">AWAITING FILE</span></div>
-        <div class="work-card placeholder zoom-card" data-filename="rrrrssss_2_prob4"><span class="plus">+</span><span class="card-title">Porsche</span><span class="card-meta">AWAITING FILE</span></div>
-        <div class="work-card placeholder zoom-card" data-filename="KING NASIR_2_prob4"><span class="plus">+</span><span class="card-title">Pagani — King Nasir</span><span class="card-meta">AWAITING FILE</span></div>
+        <div class="work-card has-video zoom-card" data-filename="R8 ABT">
+          <video src="./videos/0820.mp4" muted loop playsinline preload="metadata"></video>
+          <div class="card-text"><span class="card-title">0820</span><span class="card-meta">MERCEDES SPEEDRAMP</span></div>
+        </div>
+        <div class="work-card has-video zoom-card" data-filename="SF90XX_2_prob4">
+          <video src="./videos/0820%20(1).mp4" muted loop playsinline preload="metadata"></video>
+          <div class="card-text"><span class="card-title">0820 (1)</span><span class="card-meta">FERRARI VIDEO NORMAL</span></div>
+        </div>
+        <div class="work-card has-video zoom-card" data-filename="rrrrssss_2_prob4">
+          <video src="./videos/0820%20(4).mp4" muted loop playsinline preload="metadata"></video>
+          <div class="card-text"><span class="card-title">0820 (4)</span><span class="card-meta">2ND MOST VIRAL</span></div>
+        </div>
+        <div class="work-card has-video zoom-card" data-filename="KING NASIR_2_prob4">
+          <video src="./videos/0820%20(3).mp4" muted loop playsinline preload="metadata"></video>
+          <div class="card-text"><span class="card-title">0820 (3)</span><span class="card-meta">PAGANI VIDEO NORMAL</span></div>
+        </div>
       </div>
       <div class="zoom-progress" id="videoWorkProgress">01/04</div>
     </div>
@@ -774,8 +790,14 @@
   <div class="card-zoom" style="height:200vh;">
     <div class="card-zoom-sticky">
       <div class="card-zoom-stage">
-        <div class="work-card placeholder zoom-card" data-filename="m8ra_2_prob4"><span class="plus">+</span><span class="card-title">BMW M8</span><span class="card-meta">SIGNATURE PIECE · AWAITING FILE</span></div>
-        <div class="work-card placeholder zoom-card" data-filename="63_2_prob4"><span class="plus">+</span><span class="card-title">Mercedes</span><span class="card-meta">AWAITING FILE</span></div>
+        <div class="work-card has-video zoom-card" data-filename="m8ra_2_prob4">
+          <video src="./videos/0820%20(2).mp4" muted loop playsinline preload="metadata"></video>
+          <div class="card-text"><span class="card-title">0820 (2)</span><span class="card-meta">BMW SPEEDRAMP</span></div>
+        </div>
+        <div class="work-card has-video zoom-card" data-filename="63_2_prob4">
+          <video src="./videos/0820.mp4" muted loop playsinline preload="metadata"></video>
+          <div class="card-text"><span class="card-title">0820</span><span class="card-meta">MERCEDES SPEEDRAMP</span></div>
+        </div>
       </div>
       <div class="zoom-progress" id="speedrampsProgress">01/02</div>
     </div>
@@ -788,8 +810,14 @@
   <div class="card-zoom" style="height:200vh;">
     <div class="card-zoom-sticky">
       <div class="card-zoom-stage">
-        <div class="work-card placeholder zoom-card" data-filename="m8_2_prob4"><span class="plus">+</span><span class="card-title">BMW M8 — Landscape</span><span class="card-meta">VIRAL · AWAITING FILE</span></div>
-        <div class="work-card placeholder zoom-card" data-filename="GT2RS_2_prob4"><span class="plus">+</span><span class="card-title">Porsche GT2 RS — Portrait</span><span class="card-meta">AWAITING FILE</span></div>
+        <div class="work-card has-video zoom-card" data-filename="m8_2_prob4">
+          <video src="./videos/0820%20(6).mp4" muted loop playsinline preload="metadata"></video>
+          <div class="card-text"><span class="card-title">0820 (6)</span><span class="card-meta">VIRAL BMW CINEMATIC LANDSCAPE</span></div>
+        </div>
+        <div class="work-card has-video zoom-card" data-filename="GT2RS_2_prob4">
+          <video src="./videos/0820%20(5).mp4" muted loop playsinline preload="metadata"></video>
+          <div class="card-text"><span class="card-title">0820 (5)</span><span class="card-meta">CINEMATIC PORTRAIT VIDEO</span></div>
+        </div>
       </div>
       <div class="zoom-progress" id="cinematicsProgress">01/02</div>
     </div>
@@ -900,6 +928,27 @@ musicToggle.addEventListener('click', async () => {
 siteMusic.addEventListener('play', () => setMusicUi(true));
 siteMusic.addEventListener('pause', () => setMusicUi(false));
 siteMusic.addEventListener('ended', () => { if (!siteMusic.paused) siteMusic.play(); });
+
+// Real autoplay: every browser blocks unmuted autoplay-with-sound, period — not a GitHub thing,
+// not fixable by trying harder. Muted autoplay IS allowed, so start muted immediately, then
+// unmute on the first tap/click/key anywhere on the page. This is the standard pattern that
+// actually works, vs. a plain siteMusic.play() which silently fails on load in every browser.
+siteMusic.muted = true;
+siteMusic.play().catch(() => {});
+function unmuteMusicOnFirstInteraction(){
+  siteMusic.muted = false;
+  if (siteMusic.paused) siteMusic.play().catch(() => {});
+  setMusicUi(true);
+}
+window.addEventListener('pointerdown', unmuteMusicOnFirstInteraction, { once: true });
+window.addEventListener('keydown', unmuteMusicOnFirstInteraction, { once: true });
+
+let mediaAudioUnlocked = false;
+function unlockMediaAudio(){
+  mediaAudioUnlocked = true;
+}
+window.addEventListener('pointerdown', unlockMediaAudio, { once: true });
+window.addEventListener('keydown', unlockMediaAudio, { once: true });
 
 /* ---------- LENIS ---------- */
 const lenis = new Lenis({
@@ -1030,6 +1079,22 @@ function setupCardZoom(containerEl, progressEl){
       card.style.filter = `blur(${blur.toFixed(1)}px)`;
       card.style.pointerEvents = opacity > 0.3 ? 'auto' : 'none';
       card.style.zIndex = Math.round(opacity * 100);
+      const vid = card.querySelector('video');
+      if (vid){
+        const active = opacity > 0.2;
+        if (active){
+          vid.muted = !mediaAudioUnlocked;
+          vid.volume = mediaAudioUnlocked ? Math.min(1, Math.max(0, opacity)) * 0.95 : 0;
+          if (vid.paused){
+            vid.play().catch(() => {
+              vid.muted = true;
+              vid.play().catch(() => {});
+            });
+          }
+        } else if (!vid.paused) {
+          vid.pause();
+        }
+      }
     });
     if (progressEl){
       const activeIdx = Math.min(n - 1, Math.floor(progress * n));
